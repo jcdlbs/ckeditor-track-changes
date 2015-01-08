@@ -1756,7 +1756,7 @@
 			var parent = node && node.parentNode;
 			if (parent) {
 				parent.removeChild(node);
-				if (ice.dom.hasNoTextOrStubContent(parent)) {
+			    if (ice.dom.hasNoTextOrStubContent(parent) && parent.nodeName != "BODY") {
 					this._removeNode(parent);
 				}
 			}
